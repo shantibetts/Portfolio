@@ -103,12 +103,12 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 
 | Component               | Priority | Estimated Time | Actual Time |
 | ----------------------- | :------: | :------------: | :---------: |
-| Basic HTML / CSS        |    5     |      2hr       |     hr      |
-| Header/Footer/Nav/Intro |    4     |      4hr       |     hr      |
+| Basic HTML / CSS        |    5     |      2hr       |     1hr     |
+| Header/Footer/Nav/Intro |    4     |      4hr       |     1hr     |
 | Grid                    |    4     |      3hr       |     hr      |
 | Portfolio               |    3     |      6hr       |     hr      |
-| Nav Bar Hide/Show       |    3     |      4hr       |     hr      |
-| Social Media Icons      |    2     |      1hrs      |     hr      |
+| Nav Bar Hide/Show       |    3     |      4hr       |    0.5hr    |
+| Social Media Icons      |    2     |      1hrs      |    0.5hr    |
 | Total                   |          |     20hrs      |     hrs     |
 
 #### PostMVP
