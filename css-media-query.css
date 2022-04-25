@@ -1,0 +1,5 @@
+@media screen and (min-width: 992px) {
+	#portfolio {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 150px repeat(5 1fr);
+		}
