@@ -1,0 +1,96 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: lightgray;
+	padding: 0 0 10px 0;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		'header header'
+		'nav intro'
+		'nav portfolio'
+		'nav skills'
+		'nav contact'
+		'nav footer';
+	gap: 12px;
+}
+header {
+	grid-area: header;
+	display: flex;
+	align-items: center;
+	height: 80px;
+	background: rgba(253, 249, 249, 0.37);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.slide {
+	background: rgba(253, 249, 249, 0.37);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+}
+h1 {
+	display: flex;
+	margin-left: 50px;
+	font-size: 30px;
+}
+#nav {
+	display: none;
+	grid-area: nav;
+	width: 150px;
+	padding-top: 30px;
+	border-radius: 0 25px 25px 0;
+}
+nav li {
+	margin: 25px 0 25px 20px;
+}
+nav li a {
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+}
+div {
+	padding: 20px;
+}
+#intro {
+	grid-area: intro;
+}
+h2 {
+	font-size: 20px;
+	margin: 10px 0 25px 0;
+}
+#portfolio {
+	grid-area: portfolio;
+	background: rgba(253, 249, 249, 0.13);
+}
+article {
+	padding: 2px;
+}
+#skills {
+	grid-area: skills;
+}
+#contact {
+	grid-area: contact;
+}
+footer {
+	grid-area: footer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+footer ul {
+	display: flex;
+	align-items: center;
+}
+#menuIcon,
+#menuX {
+	width: 40px;
+	height: 40px;
+	opacity: 50%;
+}
+#menuX {
+	display: none;
+}
+.socialMediaIcons {
+	width: 40px;
+	height: 40px;
+	opacity: 50%;
+}

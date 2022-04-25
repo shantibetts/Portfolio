@@ -10,7 +10,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 | --------- | -------------------------------------------- | --------------- |
 | Sat/Sun   | Project Description                          | Awaiting Review |
 | Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Awaiting Review |
-| Wednesday | Core Application Structure (HTML, CSS, etc.) | Incomplete      |
+| Wednesday | Core Application Structure (HTML, CSS, etc.) | In Progress     |
 | Thursday  | MVP & Bug Fixes                              | Incomplete      |
 | Friday    | Final Touches                                | Incomplete      |
 | Friday    | Present                                      | Incomplete      |
