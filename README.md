@@ -105,23 +105,24 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 | ----------------------- | :------: | :------------: | :---------: |
 | Basic HTML / CSS        |    5     |      2hr       |     1hr     |
 | Header/Footer/Nav/Intro |    4     |      4hr       |     1hr     |
-| Grid                    |    4     |      3hr       |     hr      |
-| Portfolio               |    3     |      6hr       |     hr      |
+| Grid                    |    4     |      3hr       |     1hr     |
+| Portfolio               |    3     |      6hr       |     1hr     |
 | Nav Bar Hide/Show       |    3     |      4hr       |    0.5hr    |
 | Social Media Icons      |    2     |      1hrs      |    0.5hr    |
-| Total                   |          |     20hrs      |     hrs     |
+| ++Dynamic styling       |    3     | not estimated  |    2hrs     |
+| Total                   |          |     20hrs      |    7 hrs    |
 
 #### PostMVP
 
-| Component            | Priority | Estimated Time | Actual Time |
-| -------------------- | :------: | :------------: | :---------: |
-| Skills Section       |    0     |      3hr       |     -hr     |
-| Contact Form         |   2.5    |      1hr       |     hr      |
-| Background image API |    1     |      2hr       |     hr      |
-| Nav Animation        |    2     |      2hr       |     -hr     |
-| Animations           |    0     |      4hr       |     hr      |
-| Make own icon        |    2     |      4hr       |     hr      |
-| Total                |          |     16hrs      |     hrs     |
+| Component            | Priority | Estimated Time |  Actual Time   |
+| -------------------- | :------: | :------------: | :------------: |
+| Skills Section       |    0     |      3hr       | ~0.5hrs so far |
+| Contact Form         |   2.5    |      1hr       |       hr       |
+| Background image API |    1     |      2hr       |       hr       |
+| Nav Animation        |    2     |      2hr       |     0.5hr      |
+| Animations           |    0     |      4hr       |       hr       |
+| Make own icon        |    2     |      4hr       |       hr       |
+| Total                |          |     16hrs      |      hrs       |
 
 ## Additional Libraries
 
