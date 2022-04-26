@@ -9,10 +9,11 @@ body {
 		'nav portfolio'
 		'nav skills'
 		'nav contact';
-	gap: 12px;
-	padding: 92px 12px 72px 0;
+	gap: 4vmin;
+	padding: 92px 3% 72px 0;
 	line-height: 150%;
 	min-width: 330px;
+	font-size: 3vmin;
 }
 header {
 	height: 80px;
@@ -30,23 +31,36 @@ footer {
 header img {
 	margin: 12px;
 }
+#menuIcon,
+#menuX {
+	width: 40px;
+	height: 40px;
+	opacity: 50%;
+}
+#menuX {
+	display: none;
+}
 h1 {
-	display: flex;
 	margin-left: 50px;
 	font-size: 30px;
 }
-.slide {
+.slide,
+.contentSlide,
+.navSlide {
 	background: rgba(253, 249, 249, 0.37);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 12px;
-	padding: 12px;
+	padding: 1em;
 }
-#nav {
+.slide {
+	min-width: 330px;
+}
+.navSlide {
 	display: none;
 	grid-area: nav;
-	width: 120px;
-	padding-top: 30px;
+	padding-top: 6%;
 	border-radius: 0 12px 12px 0;
+	width: 8em;
 }
 nav li {
 	margin: 25px 0 25px 20px;
@@ -54,34 +68,49 @@ nav li {
 nav li a {
 	text-decoration: none;
 	color: black;
-	font-size: 18px;
+	font-size: 4vmin;
 }
 #intro {
 	grid-area: intro;
-	min-width: 327px;
-}
-#intro h2 {
-	font-size: 40px;
-	line-height: 110%;
 }
 h2 {
-	font-size: 20px;
-	padding-bottom: 12px;
+	font-size: 6vmin;
+	line-height: 120%;
+	font-weight: bold;
+	margin-bottom: 1.5%;
+}
+h3 {
+	font-size: 5vmin;
+	padding-bottom: 3%;
+	font-weight: bold;
+}
+p {
+	font-size: 16px;
+	line-height: 160%;
 }
 #portfolio {
 	grid-area: portfolio;
 	background: rgba(253, 249, 249, 0.13);
+}
+#portfolio div p {
+	margin-bottom: 3%;
+}
+.portfolioContent {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 12px;
+	gap: 3vmin;
 }
 article img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 12px;
+	display: block;
+	margin: 0 auto;
 }
-h3 {
-	font-size: 20px;
+h4 {
+	font-size: 3vmin;
+	margin: 5% 0;
+	font-weight: bold;
 }
 h3,
 article p {
@@ -109,17 +138,9 @@ footer p {
 footer ul {
 	display: flex;
 	align-items: center;
-	margin-right: 12px;
+	margin-right: 1.5%;
 }
-#menuIcon,
-#menuX {
-	width: 40px;
-	height: 40px;
-	opacity: 50%;
-}
-#menuX {
-	display: none;
-}
+
 .socialMediaIcons {
 	width: 40px;
 	height: 40px;
