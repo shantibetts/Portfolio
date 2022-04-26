@@ -3,21 +3,31 @@ body {
 	background-color: lightgray;
 	display: grid;
 	grid-template-columns: auto 1fr;
-	grid-template-rows: auto;
+	grid-template-rows: 80px repeat(4, auto) 60px;
 	grid-template-areas:
+		'header header'
 		'nav intro'
 		'nav portfolio'
 		'nav skills'
-		'nav contact';
+		'nav contact'
+		'footer footer';
 	gap: 4vmin;
-	padding: 92px 3% 72px 0;
+	padding-right: 3%;
 	line-height: 150%;
 	min-width: 330px;
 	font-size: 3vmin;
+	background-image: url('assets/thomas-griesbeck-Y2aNc1X7xLg-unsplash.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.headerSpacer {
+	grid-area: header;
 }
 header {
 	height: 80px;
 	top: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 header,
 footer {
@@ -26,7 +36,7 @@ footer {
 	align-items: center;
 	width: 100%;
 	background: rgb(194, 189, 189);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	z-index: 1;
 }
 header img {
 	margin: 12px;
@@ -47,8 +57,12 @@ h1 {
 .slide,
 .contentSlide,
 .navSlide {
-	background: rgba(253, 249, 249, 0.37);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 4px 4px 4px rgba(48, 47, 47, 0.4);
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(194, 189, 189, 0.8),
+		rgba(194, 189, 189, 0.4)
+	);
 	border-radius: 12px;
 	padding: 1em;
 }
@@ -90,7 +104,11 @@ p {
 }
 #portfolio {
 	grid-area: portfolio;
-	background: rgba(253, 249, 249, 0.13);
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(194, 189, 189, 0.6),
+		rgba(194, 189, 189, 0)
+	);
 }
 #portfolio div p {
 	margin-bottom: 3%;
@@ -109,7 +127,7 @@ article img {
 }
 h4 {
 	font-size: 3vmin;
-	margin: 5% 0;
+	margin: 0 0 5% 0;
 	font-weight: bold;
 }
 h3,
@@ -119,12 +137,36 @@ article p {
 #skills {
 	grid-area: skills;
 }
+#skills ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	gap: 3vmin;
+	padding: 0 12%;
+}
+#skills li {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
 #skills img {
-	width: 30px;
+	width: 100%;
 	height: auto;
+	opacity: 50%;
+	max-width: 100px;
 }
 #contact {
 	grid-area: contact;
+}
+#contact ul {
+	display: flex;
+	justify-content: center;
+	gap: 6%;
+}
+.contactIcons {
+	width: 100px;
+	height: auto;
+	opacity: 50%;
 }
 footer {
 	justify-content: space-between;
@@ -137,13 +179,19 @@ footer p {
 }
 footer ul {
 	display: flex;
-	align-items: center;
-	margin-right: 1.5%;
+	margin-right: 3%;
 }
-
+footer li a {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
 .socialMediaIcons {
-	width: 40px;
-	height: 40px;
+	width: 36px;
+	height: auto;
 	opacity: 50%;
-	margin: 6px;
+	padding: 12px 6px;
+}
+.footerSpacer {
+	grid-area: footer;
 }

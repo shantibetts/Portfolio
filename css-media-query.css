@@ -1,11 +1,13 @@
 @media screen and (min-width: 992px) {
 	body {
 		grid-template-columns: auto 2fr 1fr;
-		grid-template-rows: auto;
+		grid-template-rows: 80px repeat(3, auto) 60px;
 		grid-template-areas:
+			'header header header'
 			'nav intro skills'
 			'nav  portfolio portfolio'
-			'nav contact contact';
+			'nav contact contact'
+			'footer footer footer';
 	}
 	h1 {
 		margin: 0 auto;
@@ -27,8 +29,11 @@
 		position: relative;
 		bottom: 25%;
 	}
-	#skills {
-		min-width: 100%;
+	.slide + #skills {
+		min-width: 100px;
 		min-height: 20%;
+	}
+	#contact {
+		margin: 0 20%;
 	}
 }

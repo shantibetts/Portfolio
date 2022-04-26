@@ -8,9 +8,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 | Day       | Deliverable                                  | Status          |
 | --------- | -------------------------------------------- | --------------- |
-| Sat/Sun   | Project Description                          | Awaiting Review |
-| Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Awaiting Review |
-| Wednesday | Core Application Structure (HTML, CSS, etc.) | In Progress     |
+| Sat/Sun   | Project Description                          | Complete        |
+| Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Complete        |
+| Wednesday | Core Application Structure (HTML, CSS, etc.) | Awaiting Review |
 | Thursday  | MVP & Bug Fixes                              | Incomplete      |
 | Friday    | Final Touches                                | Incomplete      |
 | Friday    | Present                                      | Incomplete      |
@@ -114,15 +114,16 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 
 #### PostMVP
 
-| Component            | Priority | Estimated Time |  Actual Time   |
-| -------------------- | :------: | :------------: | :------------: |
-| Skills Section       |    0     |      3hr       | ~0.5hrs so far |
-| Contact Form         |   2.5    |      1hr       |       hr       |
-| Background image API |    1     |      2hr       |       hr       |
-| Nav Animation        |    2     |      2hr       |     0.5hr      |
-| Animations           |    0     |      4hr       |       hr       |
-| Make own icon        |    2     |      4hr       |       hr       |
-| Total                |          |     16hrs      |      hrs       |
+| Component              | Priority | Estimated Time | Actual Time |
+| ---------------------- | :------: | :------------: | :---------: |
+| Skills Section         |    0     |      3hr       |   2.5hrs    |
+| Contact Form           |   2.5    |      1hr       |     hr      |
+| Background image API   |    1     |      2hr       |     hr      |
+| Nav Animation          |    2     |      2hr       |    0.5hr    |
+| Animations             |    0     |      4hr       |     hr      |
+| Make own icon          |    2     |      4hr       |     hr      |
+| ++Chose background img |    4     |      2hr       |     2hr     |
+| Total                  |          |     16hrs      |     hrs     |
 
 ## Additional Libraries
 
@@ -142,7 +143,7 @@ function reverse(string) {
 
 ## Issues and Resolutions
 
-Use this section to list of all major issues encountered and their resolution.
+1. footer icons appear to have a margin below them that biases them up. It seems to be relative to the width of the viewport, but I can't figure out what element it's comming from. Noting and moving on.
 
 #### SAMPLE.....
 
