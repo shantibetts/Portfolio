@@ -24,6 +24,7 @@
 		margin: 0 20%;
 	}
 	.weather {
-		display: unset;
+		display: flex;
+		flex-direction: column;
 	}
 }

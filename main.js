@@ -39,7 +39,7 @@ $.ajax({
 			.then((response) => {
 				console.log(response)
 				$('.weather').append(
-					`<p>${response.properties.periods[0].temperature}ºF</p>`
+					`<p>${response.properties.periods[0].shortForecast}, ${response.properties.periods[0].temperature}ºF</p>`
 				)
 			})
 			.catch(() => {
