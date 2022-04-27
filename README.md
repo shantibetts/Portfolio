@@ -114,16 +114,17 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 
 #### PostMVP
 
-| Component              | Priority | Estimated Time | Actual Time |
-| ---------------------- | :------: | :------------: | :---------: |
-| Skills Section         |    0     |      3hr       |   2.5hrs    |
-| Contact Form           |   2.5    |      1hr       |     hr      |
-| Background image API   |    1     |      2hr       |     hr      |
-| Nav Animation          |    2     |      2hr       |    0.5hr    |
-| Animations             |    0     |      4hr       |     hr      |
-| Make own icon          |    2     |      4hr       |     hr      |
-| ++Chose background img |    4     |      2hr       |     2hr     |
-| Total                  |          |     16hrs      |     hrs     |
+| Component                    | Priority | Estimated Time | Actual Time |
+| ---------------------------- | :------: | :------------: | :---------: |
+| Skills Section               |    0     |      3hr       |   2.5hrs    |
+| Contact Form                 |   2.5    |      1hr       |     1hr     |
+| Background image API         |    1     |      2hr       |   ~0.5hr    |
+| Nav Animation                |    2     |      2hr       |    0.5hr    |
+| Animations                   |    0     |      4hr       |     hr      |
+| Make own icon                |    2     |      4hr       |     hr      |
+| ++Chose background img       |    4     |      2hr       |     2hr     |
+| ++Reformat for design change |    6     |      2hr       |     3hr     |
+| Total                        |          |     16hrs      |     hrs     |
 
 ## Additional Libraries
 

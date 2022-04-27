@@ -1,22 +1,27 @@
+html {
+	scroll-padding-top: 120px;
+	scroll-behavior: smooth;
+}
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: lightgray;
 	display: grid;
 	grid-template-columns: auto 1fr;
-	grid-template-rows: 80px repeat(4, auto) 60px;
+	grid-template-rows: 80px repeat(5, auto) 60px;
 	grid-template-areas:
-		'header header'
-		'nav intro'
-		'nav portfolio'
+		'nav header'
+		'nav headshot'
+		'nav brandStatement'
 		'nav skills'
+		'nav projects'
 		'nav contact'
-		'footer footer';
+		'nav footer';
 	gap: 4vmin;
 	padding-right: 3%;
 	line-height: 150%;
 	min-width: 330px;
 	font-size: 3vmin;
-	background-image: url('assets/thomas-griesbeck-Y2aNc1X7xLg-unsplash.jpg');
+	background-image: url('assets/nils-rasmusson-jVpIG7a-6JU-unsplash.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -55,13 +60,12 @@ h1 {
 	font-size: 30px;
 }
 .slide,
-.contentSlide,
 .navSlide {
 	box-shadow: 4px 4px 4px rgba(48, 47, 47, 0.4);
 	background-image: linear-gradient(
 		to bottom right,
-		rgba(194, 189, 189, 0.8),
-		rgba(194, 189, 189, 0.4)
+		rgba(194, 189, 189, 0.6),
+		rgba(194, 189, 189, 0.2)
 	);
 	border-radius: 12px;
 	padding: 1em;
@@ -76,6 +80,10 @@ h1 {
 	border-radius: 0 12px 12px 0;
 	width: 8em;
 }
+nav ul {
+	position: fixed;
+	top: 80px;
+}
 nav li {
 	margin: 25px 0 25px 20px;
 }
@@ -84,14 +92,27 @@ nav li a {
 	color: black;
 	font-size: 4vmin;
 }
-#intro {
-	grid-area: intro;
+#headshot {
+	grid-area: headshot;
+	margin: 0 auto;
+}
+#headshot img {
+	border-radius: 100%;
+	max-width: 100%;
+}
+#brandStatement {
+	grid-area: brandStatement;
+	max-width: 600px;
+	margin: 0 auto;
+	border-left: solid;
+	border-width: 0.5vmin;
+	padding: 0 2%;
 }
 h2 {
 	font-size: 6vmin;
 	line-height: 120%;
 	font-weight: bold;
-	margin-bottom: 1.5%;
+	margin-bottom: 2%;
 }
 h3 {
 	font-size: 5vmin;
@@ -100,17 +121,13 @@ h3 {
 }
 p {
 	font-size: 16px;
-	line-height: 160%;
+	line-height: 180%;
 }
-#portfolio {
-	grid-area: portfolio;
-	background-image: linear-gradient(
-		to bottom right,
-		rgba(194, 189, 189, 0.6),
-		rgba(194, 189, 189, 0)
-	);
+
+#projects {
+	grid-area: projects;
 }
-#portfolio div p {
+#projects div p {
 	margin-bottom: 3%;
 }
 .portfolioContent {
@@ -118,7 +135,11 @@ p {
 	grid-template-columns: 1fr;
 	gap: 3vmin;
 }
-article img {
+.project {
+	max-width: 600px;
+	justify-self: center;
+}
+.project img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 12px;
@@ -127,30 +148,42 @@ article img {
 }
 h4 {
 	font-size: 3vmin;
-	margin: 0 0 5% 0;
+	margin: 5% 0;
 	font-weight: bold;
 }
-h3,
+h3 {
+	padding: 0 0 3vmin 0;
+}
 article p {
-	margin: 12px 0;
+	padding: 3% 0;
+	border-bottom: solid;
+	border-width: 0.25vmin;
 }
 #skills {
 	grid-area: skills;
+	display: grid;
+	justify-content: center;
+	align-content: center;
 }
+#skills h3 {
+	margin: 1vmin auto 0 auto;
+}
+
 #skills ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
-	gap: 3vmin;
-	padding: 0 12%;
+	gap: 1vmin;
+	justify-self: center;
 }
 #skills li {
 	display: grid;
 	justify-items: center;
 	align-items: center;
+	gap: 3vmin;
 }
 #skills img {
-	width: 100%;
+	width: 15vmin;
 	height: auto;
 	opacity: 50%;
 	max-width: 100px;
@@ -166,7 +199,7 @@ article p {
 .contactIcons {
 	width: 100px;
 	height: auto;
-	opacity: 50%;
+	/* opacity: 50%; */
 }
 footer {
 	justify-content: space-between;
