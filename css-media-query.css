@@ -23,4 +23,7 @@
 	#contact {
 		margin: 0 20%;
 	}
+	.weather {
+		display: unset;
+	}
 }
