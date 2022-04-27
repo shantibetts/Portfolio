@@ -6,14 +6,14 @@ This schedule will be used to keep track of your progress throughout the week an
 
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-| Day       | Deliverable                                  | Status          |
-| --------- | -------------------------------------------- | --------------- |
-| Sat/Sun   | Project Description                          | Complete        |
-| Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Complete        |
-| Wednesday | Core Application Structure (HTML, CSS, etc.) | Awaiting Review |
-| Thursday  | MVP & Bug Fixes                              | Incomplete      |
-| Friday    | Final Touches                                | Incomplete      |
-| Friday    | Present                                      | Incomplete      |
+| Day       | Deliverable                                  | Status      |
+| --------- | -------------------------------------------- | ----------- |
+| Sat/Sun   | Project Description                          | Complete    |
+| Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Complete    |
+| Wednesday | Core Application Structure (HTML, CSS, etc.) | Complete    |
+| Thursday  | MVP & Bug Fixes                              | Complete    |
+| Friday    | Final Touches                                | In Progress |
+| Friday    | Present                                      | Incomplete  |
 
 ## Project Description
 
@@ -118,12 +118,13 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 | ---------------------------- | :------: | :------------: | :---------: |
 | Skills Section               |    0     |      3hr       |   2.5hrs    |
 | Contact Form                 |   2.5    |      1hr       |     1hr     |
-| Background image API         |    1     |      2hr       |   ~0.5hr    |
+| Background image API         |    1     |      2hr       |     1hr     |
 | Nav Animation                |    2     |      2hr       |    0.5hr    |
 | Animations                   |    0     |      4hr       |     hr      |
 | Make own icon                |    2     |      4hr       |     hr      |
-| ++Chose background img       |    4     |      2hr       |     2hr     |
-| ++Reformat for design change |    6     |      2hr       |     3hr     |
+| ++Chose background img       |    4     | not estimated  |     2hr     |
+| ++Reformat for design change |    6     | not estimated  |     3hr     |
+| ++More CSS, round and round  |    1     | not extimated  |    2 hr     |
 | Total                        |          |     16hrs      |     hrs     |
 
 ## Additional Libraries

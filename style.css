@@ -1,5 +1,5 @@
 html {
-	scroll-padding-top: 120px;
+	scroll-padding-top: 90px;
 	scroll-behavior: smooth;
 }
 body {
@@ -16,15 +16,19 @@ body {
 		'nav projects'
 		'nav contact'
 		'nav footer';
-	gap: 4vmin;
-	padding-right: 3%;
+	gap: 3vmin;
+	padding-right: 3vmin;
 	line-height: 150%;
-	min-width: 330px;
+	width: 97%;
+	min-width: 320px;
+	overflow-x: hidden;
 	font-size: 3vmin;
 	background-image: url('assets/nils-rasmusson-jVpIG7a-6JU-unsplash.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+.container {
 }
 .headerSpacer {
 	grid-area: header;
@@ -56,7 +60,7 @@ header img {
 	display: none;
 }
 h1 {
-	margin-left: 50px;
+	margin-left: 40px;
 	font-size: 30px;
 }
 .slide,
@@ -71,7 +75,7 @@ h1 {
 	padding: 1em;
 }
 .slide {
-	min-width: 330px;
+	min-width: 275px;
 }
 .navSlide {
 	display: none;
@@ -85,7 +89,7 @@ nav ul {
 	top: 80px;
 }
 nav li {
-	margin: 25px 0 25px 20px;
+	padding: 6vmin 0 2vmin 4vmin;
 }
 nav li a {
 	text-decoration: none;
@@ -94,11 +98,13 @@ nav li a {
 }
 #headshot {
 	grid-area: headshot;
-	margin: 0 auto;
+	display: flex;
+	justify-content: center;
 }
 #headshot img {
 	border-radius: 100%;
-	max-width: 100%;
+	width: 90%;
+	max-width: 470px;
 }
 #brandStatement {
 	grid-area: brandStatement;
@@ -109,14 +115,14 @@ nav li a {
 	padding: 0 2%;
 }
 h2 {
-	font-size: 6vmin;
+	font-size: min(max(6vmin, 90px), 30px);
 	line-height: 120%;
 	font-weight: bold;
 	margin-bottom: 2%;
 }
 h3 {
-	font-size: 5vmin;
-	padding-bottom: 3%;
+	font-size: min(max(5vmin, 75px), 25px);
+	padding: 3vmin 0;
 	font-weight: bold;
 }
 p {
@@ -147,15 +153,13 @@ p {
 	margin: 0 auto;
 }
 h4 {
-	font-size: 3vmin;
+	font-size: min(max(4vmin, 60px), 20px);
 	margin: 5% 0;
 	font-weight: bold;
 }
-h3 {
-	padding: 0 0 3vmin 0;
-}
+
 article p {
-	padding: 3% 0;
+	padding: 3vmin 0;
 	border-bottom: solid;
 	border-width: 0.25vmin;
 }
@@ -166,10 +170,11 @@ article p {
 	align-content: center;
 }
 #skills h3 {
-	margin: 1vmin auto 0 auto;
+	margin: 0 auto;
 }
 
 #skills ul {
+	padding: 3vmin, 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
@@ -182,48 +187,51 @@ article p {
 	align-items: center;
 	gap: 3vmin;
 }
+.contactIcons,
 #skills img {
 	width: 15vmin;
 	height: auto;
-	opacity: 50%;
 	max-width: 100px;
+	min-width: 50px;
 }
 #contact {
 	grid-area: contact;
 }
 #contact ul {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: center;
-	gap: 6%;
+	gap: 3vmin;
 }
-.contactIcons {
-	width: 100px;
-	height: auto;
-	/* opacity: 50%; */
+#contact li {
+	justify-self: center;
 }
 footer {
 	justify-content: space-between;
 	height: 60px;
 	bottom: 0;
 }
-footer p {
-	margin-left: 24px;
+footer p,
+footer a {
+	text-decoration: none;
+	margin-left: 12px;
 	font-size: 12px;
+	color: black;
 }
 footer ul {
 	display: flex;
+	justify-content: space-between;
 	margin-right: 3%;
 }
-footer li a {
+/* footer li a {
 	display: grid;
 	justify-items: center;
 	align-items: center;
-}
+} */
 .socialMediaIcons {
 	width: 36px;
 	height: auto;
 	opacity: 50%;
-	padding: 12px 6px;
 }
 .footerSpacer {
 	grid-area: footer;

@@ -11,13 +11,17 @@ $('#menuX').on('click', () => {
 
 const unsplashAccessKey = 'H77Joy6-hev-qWlLnZ7Tw3URG_4lrjz5yhDXqdP3oPY'
 
-$.ajax({
-	method: 'get',
-	url: 'https://api.unsplash.com/photos/random/?client_id=' + unsplashAccessKey
-})
-	.then((response) => {
-		$('body').css('background-image', `url("${response.urls.full}")`)
-	})
-	.catch(() => {
-		console.log('error')
-	})
+// $.ajax({
+// 	method: 'get',
+// 	url:
+// 		'https://api.unsplash.com/photos/jVpIG7a-6JU?client_id=' + unsplashAccessKey
+// })
+// 	.then((response) => {
+// 		$('body').css('background-image', `url("${response.urls.full}")`)
+// 		$('#photoCredit').attr('href', `${response.user.links.html}`)
+// 		$('#photoCredit').html(`photo by ${response.user.name}`)
+// 		console.log(response)
+// 	})
+// 	.catch(() => {
+// 		console.log('error')
+// 	})
