@@ -49,9 +49,6 @@ footer {
 }
 header img {
 	margin: 12px;
-}
-#menuIcon,
-#menuX {
 	width: 40px;
 	height: 40px;
 	opacity: 50%;
@@ -60,7 +57,7 @@ header img {
 	display: none;
 }
 h1 {
-	margin-left: 40px;
+	margin: 0 auto;
 	font-size: 30px;
 }
 .slide,
@@ -115,14 +112,14 @@ nav li a {
 	padding: 0 2%;
 }
 h2 {
-	font-size: min(max(6vmin, 90px), 30px);
+	font-size: max(min(6vmin, 90px), 30px);
 	line-height: 120%;
 	font-weight: bold;
 	margin-bottom: 2%;
 }
 h3 {
-	font-size: min(max(5vmin, 75px), 25px);
-	padding: 3vmin 0;
+	font-size: max(min(5vmin, 75px), 25px);
+	padding-bottom: 3vmin;
 	font-weight: bold;
 }
 p {
@@ -153,13 +150,13 @@ p {
 	margin: 0 auto;
 }
 h4 {
-	font-size: min(max(4vmin, 60px), 20px);
+	font-size: max(min(4vmin, 60px), 20px);
 	margin: 5% 0;
 	font-weight: bold;
 }
 
 article p {
-	padding: 3vmin 0;
+	padding: 5vmin 0;
 	border-bottom: solid;
 	border-width: 0.25vmin;
 }
@@ -168,16 +165,15 @@ article p {
 	display: grid;
 	justify-content: center;
 	align-content: center;
+	padding: 4vmin 0;
 }
 #skills h3 {
 	margin: 0 auto;
 }
 
 #skills ul {
-	padding: 3vmin, 0;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
+	padding: 8vw, 0;
+	display: flex;
 	gap: 1vmin;
 	justify-self: center;
 }
@@ -201,15 +197,20 @@ article p {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: center;
-	gap: 3vmin;
 }
 #contact li {
 	justify-self: center;
 }
 footer {
+	display: flex;
 	justify-content: space-between;
+	align-content: center;
 	height: 60px;
 	bottom: 0;
+}
+footer div {
+	display: flex;
+	flex-direction: column;
 }
 footer p,
 footer a {
@@ -217,17 +218,18 @@ footer a {
 	margin-left: 12px;
 	font-size: 12px;
 	color: black;
+	line-height: 150%;
 }
 footer ul {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin-right: 3%;
 }
-/* footer li a {
+footer li a {
 	display: grid;
 	justify-items: center;
 	align-items: center;
-} */
+}
 .socialMediaIcons {
 	width: 36px;
 	height: auto;

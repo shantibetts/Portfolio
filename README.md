@@ -121,7 +121,7 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 | Background image API         |    1     |      2hr       |     1hr     |
 | Nav Animation                |    2     |      2hr       |    0.5hr    |
 | Animations                   |    0     |      4hr       |     hr      |
-| Make own icon                |    2     |      4hr       |     hr      |
+| Make own icon                |    2     |      4hr       |    1.5hr    |
 | ++Chose background img       |    4     | not estimated  |     2hr     |
 | ++Reformat for design change |    6     | not estimated  |     3hr     |
 | ++More CSS, round and round  |    1     | not extimated  |    2 hr     |
