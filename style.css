@@ -208,6 +208,11 @@ article ul {
 	padding-bottom: 2vmin;
 	border-bottom: solid;
 	border-width: 0.25vmin;
+	flex-wrap: wrap;
+	align-content: center;
+}
+article li {
+	align-self: center;
 }
 .projectSkillsIcon {
 	width: 7vmin;

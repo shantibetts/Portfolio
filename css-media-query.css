@@ -8,13 +8,10 @@
 		grid-template-rows: auto repeat(3 1fr);
 		gap: 3vw;
 	}
-	#project2 {
-		position: relative;
-		bottom: 25%;
-	}
+	#project2,
 	#project4 {
 		position: relative;
-		bottom: 25%;
+		bottom: 10vmin;
 	}
 	.slide + #skills {
 		min-width: 100px;
