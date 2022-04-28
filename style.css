@@ -95,7 +95,8 @@ nav li a {
 	color: black;
 	font-size: 4vmin;
 }
-nav li a:hover {
+nav li a:hover,
+a:hover h4 {
 	border-bottom: solid;
 	border-width: 0.25vmin;
 	border-color: black;
@@ -133,7 +134,39 @@ p {
 	font-size: 16px;
 	line-height: 180%;
 }
-
+#skills {
+	grid-area: skills;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	padding: 4vmin 0;
+}
+#skills h3 {
+	margin: 0 auto;
+}
+#skills ul {
+	padding: 8vw, 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1vmin;
+	justify-self: center;
+	justify-content: center;
+}
+#skills li {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	gap: 3vmin;
+}
+.contactIcons,
+#skills img {
+	width: 15vmin;
+	height: auto;
+	max-width: 100px;
+	min-width: 50px;
+	opacity: 80%;
+	padding: 2vmin;
+}
 #projects {
 	grid-area: projects;
 }
@@ -149,7 +182,7 @@ p {
 	max-width: 600px;
 	justify-self: center;
 }
-.project img {
+.projectImg {
 	max-width: 100%;
 	height: auto;
 	border-radius: 12px;
@@ -160,43 +193,29 @@ h4 {
 	font-size: max(min(4vmin, 60px), 20px);
 	margin: 3vmin 0;
 	font-weight: bold;
+	max-width: fit-content;
 }
-
+article a {
+	text-decoration: none;
+	color: black;
+}
 article p {
-	padding-bottom: 5vmin;
+	padding-bottom: 2vmin;
+}
+article ul {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 2vmin;
 	border-bottom: solid;
 	border-width: 0.25vmin;
 }
-#skills {
-	grid-area: skills;
-	display: grid;
-	justify-content: center;
-	align-content: center;
-	padding: 4vmin 0;
-}
-#skills h3 {
-	margin: 0 auto;
-}
-
-#skills ul {
-	padding: 8vw, 0;
-	display: flex;
-	gap: 1vmin;
-	justify-self: center;
-}
-#skills li {
-	display: grid;
-	justify-items: center;
-	align-items: center;
-	gap: 3vmin;
-}
-.contactIcons,
-#skills img {
-	width: 15vmin;
+.projectSkillsIcon {
+	width: 7vmin;
 	height: auto;
-	max-width: 100px;
-	min-width: 50px;
-	opacity: 80%;
+	max-width: 60px;
+	min-width: 30px;
+	opacity: 60%;
+	padding: 0 2vmin;
 }
 #contact {
 	grid-area: contact;

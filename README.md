@@ -128,6 +128,7 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 | ++API weather for Yosemite   |    0     | not estimated  |     2hr     |
 | ++API pull from Sheets       |    0     | not estimated  |    2.5hr    |
 | ++API from Sheets styling    |    0     | not estimated  |     hr      |
+| ++skill icons for course     |    0     | not estimated  |             |
 | Total                        |          |     16hrs      |     hrs     |
 
 ## Additional Libraries

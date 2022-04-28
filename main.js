@@ -71,7 +71,9 @@ $.ajax({
 		let tags = tagsCSV.split(',')
 		$('#project1')
 			// Append Image source and alt text
-			.append(`<img src="${project[2]}" alt="${project[3]}"/>`)
+			.append(
+				`<img class="projectImg" src="${project[2]}" alt="${project[3]}"/>`
+			)
 			// Append Project title and link
 			.append(`<a href="${project[5]}"><h4>${project[0]}</h4></a>`)
 			// Append project descritpion
@@ -80,7 +82,8 @@ $.ajax({
 		// Append project tags
 		tags.forEach((tag) => {
 			$('#project1 ul').append(`<li>
-			<img src="assets/skillsIcons/${tag}.svg" alt="${tag} icon" />
+			<img class="projectSkillsIcon"
+			src="assets/skillsIcons/${tag}.svg" alt="${tag} icon" />
 		</li>`)
 		})
 	})
