@@ -60,13 +60,13 @@ const sheetsApiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/'
 const rangeStart = 'a2'
 const rangeEnd = 'f5'
 let range = `/values/${rangeStart}:${rangeEnd}`
-
-let url = `${sheetsApiUrl}${sheetId}${range}?key=${key}`
 console.log(url)
-$.ajax({ url: url, key: key }).then((data) => {
-	console.log(data)
+$.ajax({
+	url: `${sheetsApiUrl}${sheetId}${range}?key=${key}`,
+	key: key
+}).then((data) => {
 	const projects = data.values
-	projects.forEach((project, i) => {
+	projects.forEach((project) => {
 		let tagsCSV = project[4]
 		let tags = tagsCSV.split(',')
 		$('#project1')
