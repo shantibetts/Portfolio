@@ -88,12 +88,17 @@ nav ul {
 	top: 80px;
 }
 nav li {
-	padding: 6vmin 0 2vmin 4vmin;
+	padding: 3vmin 0 1vmin 2vmin;
 }
 nav li a {
 	text-decoration: none;
 	color: black;
 	font-size: 4vmin;
+}
+nav li a:hover {
+	border-bottom: solid;
+	border-width: 0.25vmin;
+	border-color: black;
 }
 #headshot {
 	grid-area: headshot;
