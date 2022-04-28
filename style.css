@@ -55,6 +55,10 @@ header img {
 	height: 40px;
 	opacity: 50%;
 }
+header a {
+	display: flex;
+	align-content: center;
+}
 #menuX {
 	display: none;
 }

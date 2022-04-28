@@ -1,15 +1,17 @@
+// event listener to show nav menu and switch icons from menu to X
 $('#menuIcon').on('click', () => {
 	$('nav').css('display', 'unset')
 	$('#menuIcon').css('display', 'none')
 	$('#menuX').css('display', 'unset')
 })
+// event listener to hide nav menu and switch icons from X to menu
 $('#menuX').on('click', () => {
 	$('nav').css('display', 'none')
 	$('#menuX').css('display', 'none')
 	$('#menuIcon').css('display', 'unset')
 })
 
-const unsplashAccessKey = 'H77Joy6-hev-qWlLnZ7Tw3URG_4lrjz5yhDXqdP3oPY'
+// const unsplashAccessKey = 'hidden'
 
 // $.ajax({
 // 	method: 'get',
@@ -23,7 +25,7 @@ const unsplashAccessKey = 'H77Joy6-hev-qWlLnZ7Tw3URG_4lrjz5yhDXqdP3oPY'
 // 		console.log(response)
 // 	})
 // 	.catch(() => {
-// 		console.log('error')
+// 		console.log('error in unsplash pull request')
 // 	})
 
 $.ajax({
@@ -31,7 +33,6 @@ $.ajax({
 	url: `https://api.weather.gov/points/37.7,-119.6`
 })
 	.then((response) => {
-		console.log(response)
 		$.ajax({
 			method: 'get',
 			url: response.properties.forecastHourly
@@ -42,11 +43,11 @@ $.ajax({
 				)
 			})
 			.catch(() => {
-				console.log('error in 2nd pull')
+				console.log('error in weather.gov 2nd pull request')
 			})
 	})
 	.catch(() => {
-		console.log('error')
+		console.log('error in weather.gov 1st pull request')
 	})
 
 const sheetUrl =
@@ -63,39 +64,52 @@ let range = `/values/${rangeStart}:${rangeEnd}`
 $.ajax({
 	url: `${sheetsApiUrl}${sheetId}${range}?key=${key}`,
 	key: key
-}).then((data) => {
-	console.log(data)
-	const skillsCSV = data.values[1][0]
-	let skills = skillsCSV.split(',')
-	skills.forEach((skill) => {
-		$('#skills ul').append(
-			`<li><img src="assets/skillsIcons/${skill}.svg" alt="${skill} icon" /></li>`
-		)
-	})
-	const projects = data.values.slice(4)
-	projects.forEach((project) => {
-		let tagsCSV = project[4]
-		let tags = tagsCSV.split(',')
-		let articleName = project[0].replace(/\s/g, '').toLowerCase()
-		let $article = $(`<article id="${articleName}" class="project"></article>`)
-		$article
-			// Append Image source and alt text
-			.append(
-				`<img class="projectImg" src="${project[2]}" alt="${project[3]}" />`
-			)
-			// Append Project title and link
-			.append(
-				`<a href="${project[5]}" target="_blank"><h4>${project[0]}</h4></a>`
-			)
-			// Append project descritpion
-			.append(`<p>${project[1]}</p>`)
-		let $ul = $('<ul class="tags"></ul>')
-		tags.forEach((tag) => {
-			let $li = $(`<li><img class="projectSkillsIcon"
-				src="assets/skillsIcons/${tag}.svg" alt="${tag} icon" /></li>`)
-			$ul.append($li)
-		})
-		$article.append($ul)
-		$('.portfolioContent').append($article)
-	})
 })
+	.then((data) => {
+		console.log(data)
+		const skillsCSV = data.values[1][0]
+		let skills = skillsCSV.split(',')
+		skills.forEach((skill) => {
+			$('#skills ul').append(
+				`<li><img src="assets/skillsIcons/${skill}.svg" alt="${skill} icon" /></li>`
+			)
+		})
+		const projects = data.values.slice(4)
+		projects.forEach((project) => {
+			// Set skill tags as a string with comma seperated values, then convert to an array of skills
+			let tagsCSV = project[4]
+			let tags = tagsCSV.split(',')
+			// Set article name to a no-space string of all lower case for jQuery class
+			let articleName = project[0].replace(/\s/g, '').toLowerCase()
+			// Create jQery object for new project
+			let $article = $(
+				`<article id="${articleName}" class="project"></article>`
+			)
+			$article
+				// Append image source and alt text
+				.append(
+					`<img class="projectImg" src="${project[2]}" alt="${project[3]}" />`
+				)
+				// Append project title and link
+				.append(
+					`<a href="${project[5]}" target="_blank"><h4>${project[0]}</h4></a>`
+				)
+				// Append project descritpion
+				.append(`<p>${project[1]}</p>`)
+			// Define ul object, then loop through each skill for the project, and add them as li's
+			let $ul = $('<ul class="tags"></ul>')
+			tags.forEach((tag) => {
+				let $li = $(`<li><img class="projectSkillsIcon"
+				src="assets/skillsIcons/${tag}.svg" alt="${tag} icon" /></li>`)
+				$ul.append($li)
+			})
+			// Append ul to article
+			$article.append($ul)
+			$('.portfolioContent').append($article)
+			// Make sure the view window stays at the top of the page
+			window.scrollTo(0, 0)
+		})
+	})
+	.catch(() => {
+		console.log('Google Sheets fetch error')
+	})

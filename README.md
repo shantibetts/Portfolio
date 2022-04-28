@@ -6,14 +6,14 @@ This schedule will be used to keep track of your progress throughout the week an
 
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-| Day       | Deliverable                                  | Status      |
-| --------- | -------------------------------------------- | ----------- |
-| Sat/Sun   | Project Description                          | Complete    |
-| Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Complete    |
-| Wednesday | Core Application Structure (HTML, CSS, etc.) | Complete    |
-| Thursday  | MVP & Bug Fixes                              | Complete    |
-| Friday    | Final Touches                                | In Progress |
-| Friday    | Present                                      | Incomplete  |
+| Day       | Deliverable                                  | Status     |
+| --------- | -------------------------------------------- | ---------- |
+| Sat/Sun   | Project Description                          | Complete   |
+| Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Complete   |
+| Wednesday | Core Application Structure (HTML, CSS, etc.) | Complete   |
+| Thursday  | MVP & Bug Fixes                              | Complete   |
+| Friday    | Final Touches                                | Complete   |
+| Friday    | Present                                      | Incomplete |
 
 ## Project Description
 
@@ -127,9 +127,11 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 | ++More CSS, round and round  |    1     | not estimated  |    2 hr     |
 | ++API weather for Yosemite   |    0     | not estimated  |     2hr     |
 | ++API pull from Sheets       |    0     | not estimated  |    2.5hr    |
-| ++API from Sheets styling    |    0     | not estimated  |     hr      |
-| ++skill icons for course     |    0     | not estimated  |             |
-| Total                        |          |     16hrs      |     hrs     |
+| ++API from Sheets styling    |    0     | not estimated  |   1hr hr    |
+| ++skill icons for course     |    0     | not estimated  |     2hr     |
+| ++obfuscate API keys         |    5     | not estimated  |     hr      |
+
+| Total | | 16hrs | hrs |
 
 ## Additional Libraries
 
@@ -146,50 +148,74 @@ const sheetUrl =
 	'https://docs.google.com/spreadsheets/d/1AVu1C-kfLCle-jHfPbu95fF1y2q9xJ6gVxpehcaWMRI/edit?usp=sharing'
 const sheetId = '1AVu1C-kfLCle-jHfPbu95fF1y2q9xJ6gVxpehcaWMRI'
 
-// this key has been deleted as it was pushed to a public repo, it is here for demonstration purposes only.
-
-const key = 'AIzaSyBqiBqr5sQwZfIk_4qnWyFOp1TGBsMpUUs'
+const key = 'hidden'
 
 const sheetsApiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/'
 
-const rangeStart = 'a2'
-const rangeEnd = 'f5'
+const rangeStart = 'a1'
+const rangeEnd = 'f8'
 let range = `/values/${rangeStart}:${rangeEnd}`
-console.log(url)
 $.ajax({
 	url: `${sheetsApiUrl}${sheetId}${range}?key=${key}`,
 	key: key
-}).then((data) => {
-	const projects = data.values
-	projects.forEach((project) => {
-		let tagsCSV = project[4]
-		let tags = tagsCSV.split(',')
-		$('#project1')
-			// Append Image source and alt text
-			.append(`<img src="${project[2]}" alt="${project[3]}"/>`)
-			// Append Project title and link
-			.append(`<a href="${project[5]}"><h4>${project[0]}</h4></a>`)
-			// Append project descritpion
-			.append(`<p>${project[1]}</p>`)
-			.append('<ul class="tags"></ul>')
-		// Append project tags
-		tags.forEach((tag) => {
-			$('#project1 ul').append(`<li>
-			<img src="assets/skillsIcons/${tag}.svg" alt="${tag} icon" />
-		</li>`)
+})
+	.then((data) => {
+		console.log(data)
+		const skillsCSV = data.values[1][0]
+		let skills = skillsCSV.split(',')
+		skills.forEach((skill) => {
+			$('#skills ul').append(
+				`<li><img src="assets/skillsIcons/${skill}.svg" alt="${skill} icon" /></li>`
+			)
+		})
+		const projects = data.values.slice(4)
+		projects.forEach((project) => {
+			// Set skill tags as a string with comma seperated values, then convert to an array of skills
+			let tagsCSV = project[4]
+			let tags = tagsCSV.split(',')
+			// Set article name to a no-space string of all lower case for jQuery class
+			let articleName = project[0].replace(/\s/g, '').toLowerCase()
+			// Create jQery object for new project
+			let $article = $(
+				`<article id="${articleName}" class="project"></article>`
+			)
+			$article
+				// Append image source and alt text
+				.append(
+					`<img class="projectImg" src="${project[2]}" alt="${project[3]}" />`
+				)
+				// Append project title and link
+				.append(
+					`<a href="${project[5]}" target="_blank"><h4>${project[0]}</h4></a>`
+				)
+				// Append project descritpion
+				.append(`<p>${project[1]}</p>`)
+			// Define ul object, then loop through each skill for the project, and add them as li's
+			let $ul = $('<ul class="tags"></ul>')
+			tags.forEach((tag) => {
+				let $li = $(`<li><img class="projectSkillsIcon"
+				src="assets/skillsIcons/${tag}.svg" alt="${tag} icon" /></li>`)
+				$ul.append($li)
+			})
+			// Append ul to article
+			$article.append($ul)
+			$('.portfolioContent').append($article)
+			// Make sure the view window stays at the top of the page
+			window.scrollTo(0, 0)
 		})
 	})
-})
+	.catch(() => {
+		console.log('Google Sheets fetch error')
+	})
 ```
 
-This API queries my google sheet and iterates through the data, creating HTML to populate my projects section of my website.
+This API queries my google sheet and iterates through the data, creating HTML to populate my projects section of my website, as well as generating the classes and id's so it can be properly styled. Finally, it makes sure that the window stays at the top of the site so there is no scroll on load.
 
 ## Issues and Resolutions
 
-1. footer icons appear to have a margin below them that biases them up. It seems to be relative to the width of the viewport, but I can't figure out what element it's comming from. Noting and moving on.
-1. I never found out why this was happening. But by displaying them inside a grid and using align-content: center, the issue has gone away.
-1. my API keys are all plain text, and have been uploaded to my changelist history. I need to delete and re-issue all keys.
-1. my API created sections are not formatting properly. I need to add them into my CSS so they get the proper styling.
+1. footer icons appear to have a margin below them that biases them up. It seems to be relative to the width of the viewport, but I can't figure out what element it's comming from. Noting and moving on. **I never found out why this was happening. But by displaying them inside a grid and using align-content: center, the issue has gone away.**
+1. my API keys are all plain text, and have been uploaded to my changelist history. **I deleted and re-issue all keys. Still no resolution on how to permanenty include them in a website and store it publicly.**
+1. my API created sections are not formatting properly. I need to add them into my CSS so they get the proper styling. **I added JS functionality to add the proper classes and ids, and added some CSS to pick up new elements that needed styling**
 
 #### SAMPLE.....
 
