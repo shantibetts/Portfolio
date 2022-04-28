@@ -11,22 +11,22 @@ $('#menuX').on('click', () => {
 	$('#menuIcon').css('display', 'unset')
 })
 
-// const unsplashAccessKey = 'hidden'
+const unsplashAccessKey = 'abZGgOrsF_5Hthmo9zAZKPfGQ81NZGoU4SYx6lNehKY'
 
-// $.ajax({
-// 	method: 'get',
-// 	url:
-// 		'https://api.unsplash.com/photos/jVpIG7a-6JU?client_id=' + unsplashAccessKey
-// })
-// 	.then((response) => {
-// 		$('body').css('background-image', `url("${response.urls.full}")`)
-// 		$('#photoCredit').attr('href', `${response.user.links.html}`)
-// 		$('#photoCredit').html(`photo by ${response.user.name}`)
-// 		console.log(response)
-// 	})
-// 	.catch(() => {
-// 		console.log('error in unsplash pull request')
-// 	})
+$.ajax({
+	method: 'get',
+	url:
+		'https://api.unsplash.com/photos/jVpIG7a-6JU?client_id=' + unsplashAccessKey
+})
+	.then((response) => {
+		$('body').css('background-image', `url("${response.urls.full}")`)
+		$('#photoCredit').attr('href', `${response.user.links.html}`)
+		$('#photoCredit').html(`photo by ${response.user.name}`)
+		console.log(response)
+	})
+	.catch(() => {
+		console.log('error in unsplash pull request')
+	})
 
 $.ajax({
 	method: 'get',
@@ -54,7 +54,7 @@ const sheetUrl =
 	'https://docs.google.com/spreadsheets/d/1AVu1C-kfLCle-jHfPbu95fF1y2q9xJ6gVxpehcaWMRI/edit?usp=sharing'
 const sheetId = '1AVu1C-kfLCle-jHfPbu95fF1y2q9xJ6gVxpehcaWMRI'
 
-const key = 'hidden'
+const key = 'AIzaSyBa9EX18cV6mOGrHBufTQcPw9UFDf_DzwM'
 
 const sheetsApiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/'
 
