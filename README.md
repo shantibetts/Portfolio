@@ -6,14 +6,14 @@ This schedule will be used to keep track of your progress throughout the week an
 
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-| Day       | Deliverable                                  | Status     |
-| --------- | -------------------------------------------- | ---------- |
-| Sat/Sun   | Project Description                          | Complete   |
-| Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Complete   |
-| Wednesday | Core Application Structure (HTML, CSS, etc.) | Complete   |
-| Thursday  | MVP & Bug Fixes                              | Complete   |
-| Friday    | Final Touches                                | Complete   |
-| Friday    | Present                                      | Incomplete |
+| Day       | Deliverable                                  | Status    |
+| --------- | -------------------------------------------- | --------- |
+| Sat/Sun   | Project Description                          | Complete  |
+| Sun/Mon   | Wireframes / Priority Matrix / Timeline      | Complete  |
+| Wednesday | Core Application Structure (HTML, CSS, etc.) | Complete  |
+| Thursday  | MVP & Bug Fixes                              | Complete  |
+| Friday    | Final Touches                                | Complete  |
+| Friday    | Present                                      | Complete! |
 
 ## Project Description
 
@@ -127,11 +127,11 @@ Inside this, Projects will have a grid layout with 2 columns to populate the act
 | ++More CSS, round and round  |    1     | not estimated  |    2 hr     |
 | ++API weather for Yosemite   |    0     | not estimated  |     2hr     |
 | ++API pull from Sheets       |    0     | not estimated  |    2.5hr    |
-| ++API from Sheets styling    |    0     | not estimated  |   1hr hr    |
+| ++API from Sheets styling    |    0     | not estimated  |     1hr     |
 | ++skill icons for course     |    0     | not estimated  |     2hr     |
-| ++obfuscate API keys         |    5     | not estimated  |     hr      |
-
-| Total | | 16hrs | hrs |
+| ++obfuscate API keys         |    5     | not estimated  |    1 hr     |
+| ++add Favicon                |    0     | not estimated  |   1.5 hr    |
+| Total                        |          |     16hrs      |   25.5hrs   |
 
 ## Additional Libraries
 
