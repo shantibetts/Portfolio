@@ -66,7 +66,6 @@ $.ajax({
 	key: key
 })
 	.then((data) => {
-		console.log(data)
 		const skillsCSV = data.values[1][0]
 		let skills = skillsCSV.split(',')
 		skills.forEach((skill) => {
