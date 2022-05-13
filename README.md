@@ -1,5 +1,11 @@
 # Portfolio Project
 
+## Project Links
+
+[GitHub Repo](https://github.com/shantibetts/Portfolio)
+
+[Portfolio website](https://shantibetts.github.io/Portfolio/)
+
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.
