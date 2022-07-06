@@ -104,7 +104,9 @@ const createProjects = (data) => {
 const defaultProjectsArray = {
 	values: [
 		['Current Skills'],
-		['html,css,javascript,jquery,ajax'],
+		[
+			'html,css,javascript,jquery,ajax,react,nodejs,mongodb,express,django,python'
+		],
 		[],
 		[
 			'Project Name',
@@ -115,36 +117,36 @@ const defaultProjectsArray = {
 			'Project URL'
 		],
 		[
-			'Project 1',
-			'Lorem ipsum dolor sit amet, consectetur adipiscing… laboris nisi ut aliquip ex ea commodo consequat.',
-			'https://via.placeholder.com/1024x512.png?text=Project+1',
-			"Project 1's picture",
+			'Portfolio Website',
+			'A mobile-first portfolio website utilizing Ajax to fetch data from Google Sheets to populate showcase projects and current skills. Jquery, native javascript and responsive CSS are used to create a seamless experience at any size. Ajax is used to fetch the background photo from unsplash, as well as the photo accredidation. A third Ajax call queries the weather in Yosemite Valley, where the background image was taken.',
+			'./assets/pictures/portfolio-image.png',
+			'Portfolio website picture',
 			'html,css,javascript,jquery,ajax',
-			'https://docs.google.com/spreadsheets/d/1AVu1C-kfLCle-jHfPbu95fF1y2q9xJ6gVxpehcaWMRI/edit#gid=0'
+			'./assets/pictures/portfolio-image'
 		],
 		[
-			'Project 2',
-			'Duis aute irure dolor in reprehenderit in voluptat… qui officia deserunt mollit anim id est laborum.',
-			'https://via.placeholder.com/1024x512.png?text=Project+2',
-			"Project 2's picture",
-			'react,ajax',
-			'https://docs.google.com/spreadsheets/d/1AVu1C-kfLCle-jHfPbu95fF1y2q9xJ6gVxpehcaWMRI/edit#gid=0'
+			'Tarot Reader',
+			'A mobile-first React application for creating Tarot readings. Leverages dynamic React components and state to create a robust and scalable application ready for future expansion. Utilizes MUI component library and dynamic CSS to create a modern and seamless user experience from mobile to desktop.',
+			'./assets/pictures/tarot-reader-image.png',
+			'Tarot Reader picture',
+			'react,css',
+			'https://shantibetts.github.io/tarot-reader/#/'
 		],
 		[
-			'Project 3',
-			'Sollicitudin tempor id eu nisl nunc mi. Luctus acc…amus arcu felis bibendum ut tristique et egestas.',
-			'https://via.placeholder.com/1024x512.png?text=Project+3',
-			"Project 3's picture",
-			'nodejs,mongodb,express',
-			'https://docs.google.com/spreadsheets/d/1AVu1C-kfLCle-jHfPbu95fF1y2q9xJ6gVxpehcaWMRI/edit#gid=0'
+			'Tracker',
+			'An interactive app that tracks bugs and can assign them to users for comments and resolution. A clean, modern interface using MUI components and reactive styling to provide a mobile-first experience.',
+			'./assets/pictures/tracker-image.png',
+			'Tracker picture',
+			'nodejs,mongodb,express,react,css',
+			'https://team2-tracker.github.io/tracker-client/#/'
 		],
 		[
-			'Project 4',
-			'Tristique nulla aliquet enim tortor at auctor. Qui…ibulum rhoncus est pellentesque elit ullamcorper.',
-			'https://via.placeholder.com/1024x512.png?text=Project+4',
-			"Project 4's picture",
-			'python,sql,django',
-			'https://docs.google.com/spreadsheets/d/1AVu1C-kfLCle-jHfPbu95fF1y2q9xJ6gVxpehcaWMRI/edit#gid=0'
+			'Burning Wheel Character Sheet',
+			'A full-stack MERN application to track and update character sheets. Implemented with Mongodb, Express, React and Node.js to create a persistent database of users and their characters with RESTful API to communicate with a custom front-end to display and update character data.',
+			'./assets/pictures/charcter-sheet.png',
+			'Burning Wheel Character Sheet picture',
+			'nodejs,mongodb,express,react,css',
+			'#'
 		]
 	]
 }
