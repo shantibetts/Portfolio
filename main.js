@@ -105,7 +105,7 @@ const defaultProjectsArray = {
 	values: [
 		['Current Skills'],
 		[
-			'html,css,javascript,jquery,ajax,react,nodejs,mongodb,express,django,python'
+			'html,css,javascript,jquery,ajax,react,nodejs,mongodb,express,django,python,postgresql'
 		],
 		[],
 		[
